@@ -69,7 +69,7 @@ func handleRequest(ctx echo.Context) error {
 		end = totalData
 	}
 
-	if start >= end {
+	if start > end {
 		return ctx.String(http.StatusBadRequest, "'start' can't be higher or equal with 'end'")
 	}
 
